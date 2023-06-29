@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwegwwg5j3e7c"
+path="res://.godot/imported/Strange.ogg-31acee8f0094ec754ce31c2c760d6357.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/ogg/Strange.ogg"
+dest_files=["res://.godot/imported/Strange.ogg-31acee8f0094ec754ce31c2c760d6357.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

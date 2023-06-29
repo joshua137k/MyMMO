@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chc3r3ixr6rd"
+path="res://.godot/imported/Floor.obj-783a2e524c7bcb06cf3efb9f90368af8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Floor.obj-783a2e524c7bcb06cf3efb9f90368af8.mesh"]
+
+source_file="res://resource/models/dugeon/Floor.obj"
+dest_files=["res://.godot/imported/Floor.obj-783a2e524c7bcb06cf3efb9f90368af8.mesh", "res://.godot/imported/Floor.obj-783a2e524c7bcb06cf3efb9f90368af8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

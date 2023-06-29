@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://de3owjliuu5gt"
+path="res://.godot/imported/Death.ogg-43a2bb04bdac62925cf8e1c6fd6da185.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/ogg/Death.ogg"
+dest_files=["res://.godot/imported/Death.ogg-43a2bb04bdac62925cf8e1c6fd6da185.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

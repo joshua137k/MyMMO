@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw7g647yqnqi0"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_mmgml"]
+[ext_resource type="PackedScene" uid="uid://de38rtbgshv4g" path="res://Sceane/DugeonCreate/Dugeon.tscn" id="3_sc4r2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nd0mx"]
+sky_top_color = Color(0.956863, 0.921569, 0.807843, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_ymfqq"]
+sky_material = SubResource("ProceduralSkyMaterial_nd0mx")
+
+[sub_resource type="Environment" id="Environment_btru4"]
+background_mode = 2
+background_energy_multiplier = 1.2
+sky = SubResource("Sky_ymfqq")
+ambient_light_color = Color(0.4, 0.321569, 0.407843, 1)
+ambient_light_sky_contribution = 0.49
+ambient_light_energy = 8.41
+reflected_light_source = 2
+tonemap_mode = 3
+sdfgi_use_occlusion = true
+fog_enabled = true
+fog_light_energy = 0.5
+fog_aerial_perspective = 1.0
+fog_height = 4.0
+fog_height_density = 0.06
+volumetric_fog_density = 0.0997
+volumetric_fog_emission_energy = 0.0
+adjustment_brightness = 4.34
+adjustment_contrast = 2.86
+adjustment_saturation = 5.19
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_mmgml")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_btru4")
+
+[node name="Chat" type="Control" parent="."]
+visible = false
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 231.0
+offset_top = 86.0
+offset_right = 961.0
+offset_bottom = 528.0
+
+[node name="LineEdit" type="LineEdit" parent="Chat"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 388.0
+offset_right = 629.0
+offset_bottom = 419.0
+
+[node name="TextEdit" type="TextEdit" parent="Chat"]
+layout_mode = 0
+offset_right = 707.0
+offset_bottom = 384.0
+editable = false
+
+[node name="SendMessage" type="Button" parent="Chat"]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 382.0
+offset_right = 716.0
+offset_bottom = 434.0
+text = "OK
+"
+
+[node name="Close" type="Button" parent="Chat"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -95.0
+offset_bottom = 49.0
+grow_horizontal = 0
+text = "Close"
+
+[node name="OpenChat" type="Button" parent="."]
+z_index = 1
+offset_top = 41.0
+offset_right = 81.0
+offset_bottom = 81.0
+text = "Chat"
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
+
+[node name="Dugeon" parent="." instance=ExtResource("3_sc4r2")]
+
+[connection signal="pressed" from="Chat/SendMessage" to="." method="_on_send_message_pressed"]
+[connection signal="pressed" from="Chat/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="OpenChat" to="." method="_on_open_chat_pressed"]

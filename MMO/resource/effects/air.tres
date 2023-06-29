@@ -1,0 +1,63 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=11 format=3 uid="uid://bnyihv557fmx1"]
+
+[sub_resource type="Gradient" id="Gradient_6gt8s"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jnc5h"]
+gradient = SubResource("Gradient_6gt8s")
+
+[sub_resource type="Gradient" id="Gradient_4iv24"]
+offsets = PackedFloat32Array(0, 0.327327, 0.48048, 0.633634, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.74978, 0.74978, 0.74978, 1, 0, 0, 0, 1, 0.294798, 0.294798, 0.294798, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i3j4j"]
+gradient = SubResource("Gradient_4iv24")
+
+[sub_resource type="Curve" id="Curve_0qpg2"]
+_data = [Vector2(0, 0), 0.0, 1.0285, 0, 0, Vector2(0.494506, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.748485, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_rdwnu"]
+curve = SubResource("Curve_0qpg2")
+
+[sub_resource type="Curve" id="Curve_yp83h"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jtaje"]
+curve = SubResource("Curve_yp83h")
+
+[sub_resource type="Curve" id="Curve_li4yq"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.434066, 0.936364), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_pmgqr"]
+curve = SubResource("Curve_li4yq")
+
+[resource]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+particle_flag_rotate_y = true
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -40.0
+radial_accel_max = -20.0
+tangential_accel_min = 20.0
+tangential_accel_max = 40.0
+tangential_accel_curve = SubResource("CurveTexture_jtaje")
+damping_min = 10.0
+damping_max = 20.0
+angle_max = 720.0
+scale_min = 0.03
+scale_max = 0.2
+scale_curve = SubResource("CurveTexture_rdwnu")
+color_ramp = SubResource("GradientTexture1D_i3j4j")
+color_initial_ramp = SubResource("GradientTexture1D_jnc5h")
+turbulence_enabled = true
+turbulence_noise_speed_random = 0.97
+turbulence_influence_over_life = SubResource("CurveTexture_pmgqr")

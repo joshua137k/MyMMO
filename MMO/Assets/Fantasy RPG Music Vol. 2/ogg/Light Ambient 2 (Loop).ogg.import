@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcs72u22pkkjb"
+path="res://.godot/imported/Light Ambient 2 (Loop).ogg-9646aef10a38f320fc3870c15f9dc44f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/ogg/Light Ambient 2 (Loop).ogg"
+dest_files=["res://.godot/imported/Light Ambient 2 (Loop).ogg-9646aef10a38f320fc3870c15f9dc44f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

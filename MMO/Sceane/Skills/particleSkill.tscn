@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu4g7v3v4eo3h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0phds"]
+transparency = 1
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1, 1, 1, 0.545098)
+albedo_texture_force_srgb = true
+emission = Color(0.67451, 0.117647, 0, 1)
+emission_energy_multiplier = 2.85
+
+[sub_resource type="QuadMesh" id="QuadMesh_bg3um"]
+material = SubResource("StandardMaterial3D_0phds")
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.75692e-09, 0, -0.0667782)
+visible = false
+amount = 128
+preprocess = 2.0
+visibility_aabb = AABB(-0.300389, -0.555897, -0.401619, 0.600779, 1.11179, 0.803238)
+trail_lifetime = 1.0
+draw_pass_1 = SubResource("QuadMesh_bg3um")

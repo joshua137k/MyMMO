@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cj3pqk76l2j4a"
+path="res://.godot/imported/Action 1 (Loop).ogg-63e0425de97f2a7e086bf4fbc55b39f0.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/ogg/Action 1 (Loop).ogg"
+dest_files=["res://.godot/imported/Action 1 (Loop).ogg-63e0425de97f2a7e086bf4fbc55b39f0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

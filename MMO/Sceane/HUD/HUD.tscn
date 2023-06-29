@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://clu04t0hwccgf"]
+
+[ext_resource type="Script" path="res://Scripts/HUD/HUD.gd" id="1_4v7ux"]
+[ext_resource type="Texture2D" uid="uid://3bax88hjtxfw" path="res://Assets/GUI/HUD.png" id="2_ktfx8"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_4v7ux")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/Control"]
+position = Vector2(0, 111.217)
+scale = Vector2(0.632813, 0.785937)
+texture = ExtResource("2_ktfx8")
+offset = Vector2(640, 190)
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/Control"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 425.0
+offset_right = 453.0
+offset_bottom = 511.0
+columns = 2
+metadata/_edit_group_ = true
+
+[node name="ArmorLabel" type="Label" parent="MarginContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Armor:0"
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "HealthLabel:100"
+
+[node name="AmmoLabel" type="Label" parent="MarginContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "AmmoLabel=0
+"

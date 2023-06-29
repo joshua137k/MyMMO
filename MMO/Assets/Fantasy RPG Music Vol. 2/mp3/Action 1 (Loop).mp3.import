@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxaols5ju2qt"
+path="res://.godot/imported/Action 1 (Loop).mp3-154b8c1fcbcee24bb76785af2ccaabcc.mp3str"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/mp3/Action 1 (Loop).mp3"
+dest_files=["res://.godot/imported/Action 1 (Loop).mp3-154b8c1fcbcee24bb76785af2ccaabcc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://ns7seftjsep2"]
+
+[ext_resource type="Script" path="res://Scripts/skill/meele.gd" id="1_ojymn"]
+[ext_resource type="Texture2D" uid="uid://dpr2inwp3ffyx" path="res://resource/models/magics/Shield_0.png" id="2_t2jkr"]
+[ext_resource type="PackedScene" uid="uid://cu4g7v3v4eo3h" path="res://Sceane/Skills/particleSkill.tscn" id="3_m511p"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vhwp6"]
+
+[sub_resource type="Sky" id="Sky_hvsur"]
+sky_material = SubResource("ProceduralSkyMaterial_vhwp6")
+
+[sub_resource type="Environment" id="Environment_3ugu0"]
+background_mode = 2
+sky = SubResource("Sky_hvsur")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jywps"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_t2jkr")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3oq4n"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.4375, 0.06251, 1.62501, 0.87501),
+"format": 4097,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 4, 0, 1, 0, 5, 0, 5, 0, 1, 0, 0, 0, 7, 0, 2, 0, 6, 0, 6, 0, 2, 0, 3, 0, 5, 0, 0, 0, 7, 0, 7, 0, 0, 0, 2, 0, 1, 0, 4, 0, 3, 0, 3, 0, 4, 0, 6, 0),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 62, 0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 190, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 190, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 62, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 190, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 62)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ljs06"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.4375, 0.06251, 1.62501, 0.87501),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 96, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 62, 0, 0, 96, 62, 0, 0, 208, 62, 0, 0, 96, 62, 0, 0, 0, 0, 0, 0, 224, 62, 0, 0, 0, 0, 0, 0, 96, 62, 0, 0, 208, 62, 0, 0, 224, 62, 0, 0, 208, 62, 0, 0, 64, 61, 0, 0, 32, 63, 0, 0, 0, 61, 0, 0, 32, 63, 0, 0, 64, 61, 0, 0, 208, 62, 0, 0, 0, 61, 0, 0, 208, 62, 0, 0, 128, 61, 0, 0, 208, 62, 0, 0, 64, 61, 0, 0, 208, 62, 0, 0, 128, 61, 0, 0, 32, 63, 0, 0, 64, 61, 0, 0, 32, 63, 0, 0, 128, 60, 0, 0, 208, 62, 0, 0, 0, 61, 0, 0, 208, 62, 0, 0, 128, 60, 0, 0, 80, 63, 0, 0, 0, 61, 0, 0, 80, 63, 0, 0, 0, 0, 0, 0, 208, 62, 0, 0, 128, 60, 0, 0, 208, 62, 0, 0, 0, 0, 0, 0, 80, 63, 0, 0, 128, 60, 0, 0, 80, 63),
+"format": 4119,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0),
+"material": SubResource("StandardMaterial3D_jywps"),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 62, 255, 255, 255, 127, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 190, 255, 255, 255, 127, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 62, 255, 255, 255, 127, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 190, 255, 255, 255, 127, 255, 255, 255, 255, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 190, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 62, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 190, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 62, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 190, 255, 127, 255, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 190, 255, 127, 255, 255, 0, 0, 255, 191, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 62, 255, 127, 255, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 62, 255, 127, 255, 255, 0, 0, 255, 191, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 62, 255, 127, 0, 0, 0, 0, 255, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 62, 255, 127, 0, 0, 0, 0, 255, 63, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 190, 255, 127, 0, 0, 0, 0, 255, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 190, 255, 127, 0, 0, 0, 0, 255, 63, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 62, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 62, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 62, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 62, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 208, 63, 0, 0, 224, 190, 255, 255, 255, 255, 0, 0, 255, 191, 0, 0, 128, 189, 0, 0, 208, 63, 0, 0, 224, 190, 255, 255, 255, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 190, 255, 255, 255, 255, 0, 0, 255, 191, 0, 0, 128, 189, 0, 0, 0, 0, 0, 0, 224, 190, 255, 255, 255, 255, 0, 0, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3oq4n")
+
+[node name="shield" type="Node3D"]
+script = ExtResource("1_ojymn")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.1426, 0.430331, 0)
+environment = SubResource("Environment_3ugu0")
+
+[node name="Mesh" type="Node3D" parent="."]
+
+[node name="Node2" type="Node3D" parent="Mesh"]
+
+[node name="cube" type="MeshInstance3D" parent="Mesh/Node2"]
+mesh = SubResource("ArrayMesh_ljs06")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="." instance=ExtResource("3_m511p")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.75692e-09, 0.869303, -0.0667782)
+visible = true

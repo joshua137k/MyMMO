@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2l3tpe6lacop"
+path="res://.godot/imported/Ambient 4.mp3-b77bfab749f100c71b3934415df15bf6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/mp3/Ambient 4.mp3"
+dest_files=["res://.godot/imported/Ambient 4.mp3-b77bfab749f100c71b3934415df15bf6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

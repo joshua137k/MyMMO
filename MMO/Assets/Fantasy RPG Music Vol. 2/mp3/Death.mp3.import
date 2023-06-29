@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwwtaehl2dhaq"
+path="res://.godot/imported/Death.mp3-2f80242d5dd63aac689f15e3058ee3b5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/mp3/Death.mp3"
+dest_files=["res://.godot/imported/Death.mp3-2f80242d5dd63aac689f15e3058ee3b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

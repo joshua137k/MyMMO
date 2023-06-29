@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkiddys5mqmqu"
+path="res://.godot/imported/Night Ambient 3 (Loop).ogg-40fdab281012027e79132156ec3e0c87.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/ogg/Night Ambient 3 (Loop).ogg"
+dest_files=["res://.godot/imported/Night Ambient 3 (Loop).ogg-40fdab281012027e79132156ec3e0c87.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

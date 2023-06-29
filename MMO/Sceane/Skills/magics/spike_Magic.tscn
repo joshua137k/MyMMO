@@ -1,0 +1,252 @@
+[gd_scene load_steps=21 format=3 uid="uid://bek3r4tfe4e4i"]
+
+[ext_resource type="Texture2D" uid="uid://dmi881cu3vyke" path="res://resource/models/magics/spike_0.png" id="1_2qgfw"]
+[ext_resource type="Script" path="res://Scripts/skill/magic/spike_Magic.gd" id="1_645lt"]
+[ext_resource type="Animation" uid="uid://bo6cpc7ns23rj" path="res://resource/skillsAnimation/spike.res" id="2_rvh7h"]
+[ext_resource type="PackedScene" uid="uid://cu4g7v3v4eo3h" path="res://Sceane/Skills/particleSkill.tscn" id="3_j5f8m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fnsye"]
+
+[sub_resource type="Sky" id="Sky_s6h2r"]
+sky_material = SubResource("ProceduralSkyMaterial_fnsye")
+
+[sub_resource type="Environment" id="Environment_vne00"]
+background_mode = 2
+sky = SubResource("Sky_s6h2r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqmu2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7qrl"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_2qgfw")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_174w7"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -0.1875, 0.25001, 0.75, 0.25001),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 0, 4, 0, 0, 0, 2, 0, 4, 0, 3, 0, 3, 0, 4, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 5,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 128, 61, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 128, 61, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 64, 190, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 64, 190, 0, 0, 0, 0, 0, 0, 64, 63, 0, 0, 128, 189)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6a5y7"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -0.1875, 0.25001, 0.75, 0.25001),
+"attribute_data": PackedByteArray(0, 0, 152, 62, 0, 0, 0, 0, 0, 0, 112, 62, 0, 0, 0, 0, 0, 0, 152, 62, 0, 0, 128, 61, 0, 0, 112, 62, 0, 0, 128, 61, 16, 18, 32, 62, 194, 240, 238, 62, 240, 237, 95, 62, 122, 16, 241, 62, 240, 237, 95, 62, 0, 0, 0, 0, 254, 130, 144, 56, 194, 240, 238, 62, 191, 183, 127, 61, 122, 16, 241, 62, 191, 183, 127, 61, 0, 0, 0, 0, 33, 36, 160, 61, 194, 240, 238, 62, 240, 237, 15, 62, 122, 16, 241, 62, 240, 237, 15, 62, 0, 0, 0, 0, 16, 18, 96, 62, 96, 120, 31, 63, 248, 246, 143, 62, 61, 136, 32, 63, 248, 246, 143, 62, 0, 0, 32, 62),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 4, 0, 6, 0, 5, 0, 7, 0, 9, 0, 8, 0, 10, 0, 12, 0, 11, 0, 13, 0, 15, 0, 14, 0),
+"material": SubResource("StandardMaterial3D_u7qrl"),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 128, 61, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 128, 61, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 64, 190, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 64, 190, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 128, 61, 181, 237, 72, 146, 75, 3, 184, 255, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 64, 190, 181, 237, 72, 146, 75, 3, 184, 255, 0, 0, 0, 0, 0, 0, 64, 63, 0, 0, 128, 189, 181, 237, 72, 146, 75, 3, 184, 255, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 128, 61, 255, 127, 72, 146, 179, 252, 235, 193, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 128, 61, 255, 127, 72, 146, 179, 252, 235, 193, 0, 0, 0, 0, 0, 0, 64, 63, 0, 0, 128, 189, 255, 127, 72, 146, 179, 252, 235, 193, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 64, 190, 181, 237, 255, 255, 216, 3, 165, 193, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 64, 190, 181, 237, 255, 255, 216, 3, 165, 193, 0, 0, 0, 0, 0, 0, 64, 63, 0, 0, 128, 189, 181, 237, 255, 255, 216, 3, 165, 193, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 64, 190, 73, 18, 72, 146, 140, 128, 165, 193, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 128, 61, 73, 18, 72, 146, 140, 128, 165, 193, 0, 0, 0, 0, 0, 0, 64, 63, 0, 0, 128, 189, 73, 18, 72, 146, 140, 128, 165, 193)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_174w7")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_82vbm"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -0.625, 0.25001, 0.875, 0.25001),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 0, 4, 0, 0, 0, 2, 0, 4, 0, 3, 0, 3, 0, 4, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 5,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 192, 190, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 192, 190, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 32, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 32, 191, 0, 0, 0, 0, 0, 0, 96, 63, 0, 0, 0, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6okmr"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -0.625, 0.25001, 0.875, 0.25001),
+"attribute_data": PackedByteArray(0, 0, 152, 62, 0, 0, 0, 0, 0, 0, 112, 62, 0, 0, 0, 0, 0, 0, 152, 62, 0, 0, 128, 61, 0, 0, 112, 62, 0, 0, 128, 61, 16, 18, 32, 62, 194, 240, 238, 62, 240, 237, 95, 62, 122, 16, 241, 62, 240, 237, 95, 62, 0, 0, 0, 0, 254, 130, 144, 56, 194, 240, 238, 62, 191, 183, 127, 61, 122, 16, 241, 62, 191, 183, 127, 61, 0, 0, 0, 0, 33, 36, 160, 61, 194, 240, 238, 62, 240, 237, 15, 62, 122, 16, 241, 62, 240, 237, 15, 62, 0, 0, 0, 0, 16, 18, 96, 62, 96, 120, 31, 63, 248, 246, 143, 62, 61, 136, 32, 63, 248, 246, 143, 62, 0, 0, 32, 62),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 4, 0, 6, 0, 5, 0, 7, 0, 9, 0, 8, 0, 10, 0, 12, 0, 11, 0, 13, 0, 15, 0, 14, 0),
+"material": SubResource("StandardMaterial3D_u7qrl"),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 192, 190, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 192, 190, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 32, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 32, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 192, 190, 255, 239, 255, 143, 212, 3, 184, 255, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 32, 191, 255, 239, 255, 143, 212, 3, 184, 255, 0, 0, 0, 0, 0, 0, 96, 63, 0, 0, 0, 191, 255, 239, 255, 143, 212, 3, 184, 255, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 192, 190, 255, 127, 255, 143, 42, 252, 47, 194, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 192, 190, 255, 127, 255, 143, 42, 252, 47, 194, 0, 0, 0, 0, 0, 0, 96, 63, 0, 0, 0, 191, 255, 127, 255, 143, 42, 252, 47, 194, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 32, 191, 255, 239, 255, 255, 96, 4, 233, 193, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 32, 191, 255, 239, 255, 255, 96, 4, 233, 193, 0, 0, 0, 0, 0, 0, 96, 63, 0, 0, 0, 191, 255, 239, 255, 255, 96, 4, 233, 193, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 32, 191, 255, 15, 255, 143, 139, 128, 233, 193, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 192, 190, 255, 15, 255, 143, 139, 128, 233, 193, 0, 0, 0, 0, 0, 0, 96, 63, 0, 0, 0, 191, 255, 15, 255, 143, 139, 128, 233, 193)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_82vbm")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8ntnk"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -1.0625, 0.25001, 1, 0.25001),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 0, 4, 0, 0, 0, 2, 0, 4, 0, 3, 0, 3, 0, 4, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 5,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 80, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 80, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 136, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 136, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 112, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1hvr2"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -1.0625, 0.25001, 1, 0.25001),
+"attribute_data": PackedByteArray(0, 0, 152, 62, 0, 0, 0, 0, 0, 0, 112, 62, 0, 0, 0, 0, 0, 0, 152, 62, 0, 0, 128, 61, 0, 0, 112, 62, 0, 0, 128, 61, 16, 18, 32, 62, 194, 240, 238, 62, 240, 237, 95, 62, 122, 16, 241, 62, 240, 237, 95, 62, 0, 0, 0, 0, 254, 130, 144, 56, 194, 240, 238, 62, 191, 183, 127, 61, 122, 16, 241, 62, 191, 183, 127, 61, 0, 0, 0, 0, 33, 36, 160, 61, 194, 240, 238, 62, 240, 237, 15, 62, 122, 16, 241, 62, 240, 237, 15, 62, 0, 0, 0, 0, 16, 18, 96, 62, 96, 120, 31, 63, 248, 246, 143, 62, 61, 136, 32, 63, 248, 246, 143, 62, 0, 0, 32, 62),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 4, 0, 6, 0, 5, 0, 7, 0, 9, 0, 8, 0, 10, 0, 12, 0, 11, 0, 13, 0, 15, 0, 14, 0),
+"material": SubResource("StandardMaterial3D_u7qrl"),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 80, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 80, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 136, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 136, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 80, 191, 198, 241, 56, 142, 91, 4, 185, 255, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 136, 191, 198, 241, 56, 142, 91, 4, 185, 255, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 112, 191, 198, 241, 56, 142, 91, 4, 185, 255, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 80, 191, 255, 127, 56, 142, 163, 251, 114, 194, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 80, 191, 255, 127, 56, 142, 163, 251, 114, 194, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 112, 191, 255, 127, 56, 142, 163, 251, 114, 194, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 136, 191, 198, 241, 255, 255, 230, 4, 44, 194, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 136, 191, 198, 241, 255, 255, 230, 4, 44, 194, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 112, 191, 198, 241, 255, 255, 230, 4, 44, 194, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 136, 191, 56, 14, 56, 142, 138, 128, 45, 194, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 80, 191, 56, 14, 56, 142, 138, 128, 45, 194, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 112, 191, 56, 14, 56, 142, 138, 128, 45, 194)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8ntnk")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5eqjj"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -1.4375, 0.25001, 1.375, 0.25001),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 0, 4, 0, 0, 0, 2, 0, 4, 0, 3, 0, 3, 0, 4, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 5,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 152, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 152, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 184, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 184, 191, 0, 0, 0, 0, 0, 0, 176, 63, 0, 0, 168, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2hvk1"]
+resource_name = "blockbench_export_mesh4"
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -1.4375, 0.25001, 1.375, 0.25001),
+"attribute_data": PackedByteArray(0, 0, 152, 62, 0, 0, 0, 0, 0, 0, 112, 62, 0, 0, 0, 0, 0, 0, 152, 62, 0, 0, 128, 61, 0, 0, 112, 62, 0, 0, 128, 61, 16, 18, 32, 62, 194, 240, 238, 62, 240, 237, 95, 62, 122, 16, 241, 62, 240, 237, 95, 62, 0, 0, 0, 0, 254, 130, 144, 56, 194, 240, 238, 62, 191, 183, 127, 61, 122, 16, 241, 62, 191, 183, 127, 61, 0, 0, 0, 0, 33, 36, 160, 61, 194, 240, 238, 62, 240, 237, 15, 62, 122, 16, 241, 62, 240, 237, 15, 62, 0, 0, 0, 0, 16, 18, 96, 62, 96, 120, 31, 63, 248, 246, 143, 62, 61, 136, 32, 63, 248, 246, 143, 62, 0, 0, 32, 62),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 4, 0, 6, 0, 5, 0, 7, 0, 9, 0, 8, 0, 10, 0, 12, 0, 11, 0, 13, 0, 15, 0, 14, 0),
+"material": SubResource("StandardMaterial3D_u7qrl"),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 152, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 152, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 184, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 184, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 152, 191, 84, 245, 170, 138, 234, 5, 186, 255, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 184, 191, 84, 245, 170, 138, 234, 5, 186, 255, 0, 0, 0, 0, 0, 0, 176, 63, 0, 0, 168, 191, 84, 245, 170, 138, 234, 5, 186, 255, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 152, 191, 255, 127, 170, 138, 20, 250, 57, 195, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 152, 191, 255, 127, 170, 138, 20, 250, 57, 195, 0, 0, 0, 0, 0, 0, 176, 63, 0, 0, 168, 191, 255, 127, 170, 138, 20, 250, 57, 195, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 184, 191, 84, 245, 255, 255, 116, 6, 244, 194, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 184, 191, 84, 245, 255, 255, 116, 6, 244, 194, 0, 0, 0, 0, 0, 0, 176, 63, 0, 0, 168, 191, 84, 245, 255, 255, 116, 6, 244, 194, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 184, 191, 170, 10, 170, 138, 137, 128, 244, 194, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 152, 191, 170, 10, 170, 138, 137, 128, 244, 194, 0, 0, 0, 0, 0, 0, 176, 63, 0, 0, 168, 191, 170, 10, 170, 138, 137, 128, 244, 194)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5eqjj")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bsdnj"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -1.8125, 0.25001, 1.875, 0.25001),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 2, 0, 1, 0, 4, 0, 0, 0, 2, 0, 4, 0, 3, 0, 3, 0, 4, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 5,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 200, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 200, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 232, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 232, 191, 0, 0, 0, 0, 0, 0, 240, 63, 0, 0, 216, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gl6oo"]
+resource_name = "blockbench_export_mesh5"
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -1.8125, 0.25001, 1.875, 0.25001),
+"attribute_data": PackedByteArray(0, 0, 152, 62, 0, 0, 0, 0, 0, 0, 112, 62, 0, 0, 0, 0, 0, 0, 152, 62, 0, 0, 128, 61, 0, 0, 112, 62, 0, 0, 128, 61, 16, 18, 32, 62, 194, 240, 238, 62, 240, 237, 95, 62, 122, 16, 241, 62, 240, 237, 95, 62, 0, 0, 0, 0, 254, 130, 144, 56, 194, 240, 238, 62, 191, 183, 127, 61, 122, 16, 241, 62, 191, 183, 127, 61, 0, 0, 0, 0, 33, 36, 160, 61, 194, 240, 238, 62, 240, 237, 15, 62, 122, 16, 241, 62, 240, 237, 15, 62, 0, 0, 0, 0, 16, 18, 96, 62, 96, 120, 31, 63, 248, 246, 143, 62, 61, 136, 32, 63, 248, 246, 143, 62, 0, 0, 32, 62),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0, 4, 0, 6, 0, 5, 0, 7, 0, 9, 0, 8, 0, 10, 0, 12, 0, 11, 0, 13, 0, 15, 0, 14, 0),
+"material": SubResource("StandardMaterial3D_u7qrl"),
+"name": "material_0",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 200, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 200, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 232, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 232, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 200, 191, 255, 247, 255, 135, 239, 7, 187, 255, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 232, 191, 255, 247, 255, 135, 239, 7, 187, 255, 0, 0, 0, 0, 0, 0, 240, 63, 0, 0, 216, 191, 255, 247, 255, 135, 239, 7, 187, 255, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 200, 191, 255, 127, 255, 135, 15, 248, 58, 196, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 200, 191, 255, 127, 255, 135, 15, 248, 58, 196, 0, 0, 0, 0, 0, 0, 240, 63, 0, 0, 216, 191, 255, 127, 255, 135, 15, 248, 58, 196, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 232, 191, 255, 247, 255, 255, 118, 8, 246, 195, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 232, 191, 255, 247, 255, 255, 118, 8, 246, 195, 0, 0, 0, 0, 0, 0, 240, 63, 0, 0, 216, 191, 255, 247, 255, 255, 118, 8, 246, 195, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 232, 191, 255, 7, 255, 135, 134, 128, 246, 195, 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 200, 191, 255, 7, 255, 135, 134, 128, 246, 195, 0, 0, 0, 0, 0, 0, 240, 63, 0, 0, 216, 191, 255, 7, 255, 135, 134, 128, 246, 195)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bsdnj")
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1jvao"]
+_data = {
+"spike": ExtResource("2_rvh7h")
+}
+
+[node name="Spike" type="Node3D"]
+script = ExtResource("1_645lt")
+metadata/_edit_group_ = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.052, 0, 3.73927)
+environment = SubResource("Environment_vne00")
+
+[node name="spike2" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.795, -0.516, 0)
+
+[node name="Spike" type="Node3D" parent="spike2"]
+
+[node name="bone" type="Node3D" parent="spike2/Spike"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="pyramid" type="MeshInstance3D" parent="spike2/Spike/bone"]
+material_override = SubResource("StandardMaterial3D_rqmu2")
+mesh = SubResource("ArrayMesh_6a5y7")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="spike2/Spike/bone" instance=ExtResource("3_j5f8m")]
+
+[node name="bone2" type="Node3D" parent="spike2/Spike"]
+
+[node name="pyramid2" type="MeshInstance3D" parent="spike2/Spike/bone2"]
+material_override = SubResource("StandardMaterial3D_rqmu2")
+mesh = SubResource("ArrayMesh_6okmr")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="spike2/Spike/bone2" instance=ExtResource("3_j5f8m")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.86202e-08, 0, -0.521197)
+
+[node name="bone3" type="Node3D" parent="spike2/Spike"]
+
+[node name="pyramid3" type="MeshInstance3D" parent="spike2/Spike/bone3"]
+material_override = SubResource("StandardMaterial3D_rqmu2")
+mesh = SubResource("ArrayMesh_1hvr2")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="spike2/Spike/bone3" instance=ExtResource("3_j5f8m")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4.70602e-08, 0, -0.943056)
+
+[node name="bone4" type="Node3D" parent="spike2/Spike"]
+
+[node name="pyramid4" type="MeshInstance3D" parent="spike2/Spike/bone4"]
+material_override = SubResource("StandardMaterial3D_rqmu2")
+mesh = SubResource("ArrayMesh_2hvk1")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="spike2/Spike/bone4" instance=ExtResource("3_j5f8m")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -6.28371e-08, 0, -1.30399)
+
+[node name="bone5" type="Node3D" parent="spike2/Spike"]
+
+[node name="pyramid5" type="MeshInstance3D" parent="spike2/Spike/bone5"]
+material_override = SubResource("StandardMaterial3D_rqmu2")
+mesh = SubResource("ArrayMesh_gl6oo")
+skeleton = NodePath("")
+
+[node name="GPUParticles3D" parent="spike2/Spike/bone5" instance=ExtResource("3_j5f8m")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.11131e-08, 0, -1.72209)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="spike2"]
+autoplay = "manage/spike"
+libraries = {
+"manage": SubResource("AnimationLibrary_1jvao")
+}

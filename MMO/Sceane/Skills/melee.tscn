@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcfv5tririjhp"]
+
+[ext_resource type="Script" path="res://Scripts/skill/meele.gd" id="1_awtxg"]
+[ext_resource type="PackedScene" uid="uid://cu4g7v3v4eo3h" path="res://Sceane/Skills/particleSkill.tscn" id="2_pagbn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gtfp1"]
+
+[sub_resource type="Sky" id="Sky_oyvjq"]
+sky_material = SubResource("ProceduralSkyMaterial_gtfp1")
+
+[sub_resource type="Environment" id="Environment_qbyom"]
+background_mode = 2
+sky = SubResource("Sky_oyvjq")
+
+[node name="melee" type="Node3D"]
+script = ExtResource("1_awtxg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.1426, 0.430331, 0)
+environment = SubResource("Environment_qbyom")
+
+[node name="Mesh" type="Node3D" parent="."]
+
+[node name="GPUParticles3D" parent="." instance=ExtResource("2_pagbn")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.75692e-09, 0.869303, -0.0667782)
+visible = true

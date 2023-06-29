@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://biaxw63t5gai2"
+path="res://.godot/imported/Ambient 8.ogg-9010fff49500701e037fc56039e1c599.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Fantasy RPG Music Vol. 2/ogg/Ambient 8.ogg"
+dest_files=["res://.godot/imported/Ambient 8.ogg-9010fff49500701e037fc56039e1c599.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

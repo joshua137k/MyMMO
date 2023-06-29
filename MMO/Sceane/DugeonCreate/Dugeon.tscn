@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://de38rtbgshv4g"]
+
+[ext_resource type="Script" path="res://Scripts/DugeonCreate/Dugeon3D.gd" id="1_6nvfe"]
+[ext_resource type="PackedScene" uid="uid://cq20pts3yyfrf" path="res://Sceane/DugeonCreate/mapa.tscn" id="2_idq0t"]
+
+[node name="Dugeon" type="Node3D"]
+script = ExtResource("1_6nvfe")
+Map = ExtResource("2_idq0t")

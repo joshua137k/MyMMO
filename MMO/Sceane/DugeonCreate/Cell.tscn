@@ -1,0 +1,121 @@
+[gd_scene load_steps=16 format=3 uid="uid://w6y0nnsbm5rh"]
+
+[ext_resource type="Script" path="res://Scripts/DugeonCreate/Cell.gd" id="1_rinwe"]
+[ext_resource type="Texture2D" uid="uid://b1rrqlnsuhkvl" path="res://Assets/Textures/walls/GRYBRIK1.png" id="2_f5crs"]
+[ext_resource type="Texture2D" uid="uid://badidsxg4wan8" path="res://Assets/Tiles_Map/WallNormals.png" id="3_bxp57"]
+[ext_resource type="ArrayMesh" uid="uid://b2dm1rmcnsusn" path="res://resource/models/dugeon/Wall.obj" id="4_fmy7p"]
+[ext_resource type="Texture2D" uid="uid://pbt1xmg5cbv" path="res://Assets/Textures/walls/BOLDERA1.png" id="5_168kk"]
+[ext_resource type="ArrayMesh" uid="uid://chc3r3ixr6rd" path="res://resource/models/dugeon/Floor.obj" id="6_668ij"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj5ya"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.352941, 0.352941, 0.352941, 1)
+albedo_texture = ExtResource("2_f5crs")
+metallic = 0.5
+normal_enabled = true
+normal_texture = ExtResource("3_bxp57")
+texture_filter = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dwjbn"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5f6ck"]
+albedo_color = Color(0.352941, 0.352941, 0.352941, 1)
+albedo_texture = ExtResource("2_f5crs")
+normal_enabled = true
+normal_texture = ExtResource("3_bxp57")
+texture_filter = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_um6q2"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7ggbq"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_11yqd"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0qpv"]
+albedo_color = Color(0.352941, 0.352941, 0.352941, 1)
+albedo_texture = ExtResource("5_168kk")
+texture_filter = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i3h0y"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rb63n"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[node name="Cell" type="Node3D" groups=["nodes"]]
+script = ExtResource("1_rinwe")
+
+[node name="SouthFace" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 1)
+material_override = SubResource("StandardMaterial3D_hj5ya")
+mesh = ExtResource("4_fmy7p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SouthFace"]
+collision_layer = 129
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SouthFace/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_dwjbn")
+
+[node name="EastFace" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 1, 1, 0)
+material_override = SubResource("StandardMaterial3D_5f6ck")
+mesh = ExtResource("4_fmy7p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EastFace"]
+collision_layer = 129
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EastFace/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_um6q2")
+
+[node name="WestFace" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -1, 1, 0)
+material_override = SubResource("StandardMaterial3D_5f6ck")
+mesh = ExtResource("4_fmy7p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WestFace"]
+collision_layer = 129
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WestFace/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7ggbq")
+
+[node name="NorthFace" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, -1)
+material_override = SubResource("StandardMaterial3D_5f6ck")
+mesh = ExtResource("4_fmy7p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NorthFace"]
+collision_layer = 129
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NorthFace/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_11yqd")
+
+[node name="BottomFace" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_i0qpv")
+mesh = ExtResource("6_668ij")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BottomFace"]
+collision_layer = 129
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BottomFace/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_i3h0y")
+
+[node name="TopFace" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+material_override = SubResource("StandardMaterial3D_i0qpv")
+mesh = ExtResource("6_668ij")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TopFace"]
+collision_layer = 129
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopFace/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rb63n")

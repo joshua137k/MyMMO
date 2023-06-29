@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3h0tgluvntyi"]
+
+[ext_resource type="Script" path="res://Scripts/skill/magic/Ball_Magic.gd" id="1_hyj2m"]
+[ext_resource type="PackedScene" uid="uid://cu4g7v3v4eo3h" path="res://Sceane/Skills/particleSkill.tscn" id="2_h2xkd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sajg4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rt2ir"]
+radius = 0.125
+height = 0.25
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ngjun"]
+
+[sub_resource type="Sky" id="Sky_uty3b"]
+sky_material = SubResource("ProceduralSkyMaterial_ngjun")
+
+[sub_resource type="Environment" id="Environment_eyn0b"]
+background_mode = 2
+sky = SubResource("Sky_uty3b")
+
+[node name="BallMagic" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_sajg4")
+mesh = SubResource("SphereMesh_rt2ir")
+script = ExtResource("1_hyj2m")
+metadata/_edit_group_ = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.1426, 0.430331, 0)
+environment = SubResource("Environment_eyn0b")
+
+[node name="GPUParticles3D" parent="." instance=ExtResource("2_h2xkd")]
